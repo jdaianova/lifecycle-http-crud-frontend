@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jdaianova/lifecycle-http-crud-frontend/static/css/main.128f5f02.css",
+    "main.js": "/jdaianova/lifecycle-http-crud-frontend/static/js/main.5684d348.js",
+    "static/js/787.ad4f4dcc.chunk.js": "/jdaianova/lifecycle-http-crud-frontend/static/js/787.ad4f4dcc.chunk.js",
+    "index.html": "/jdaianova/lifecycle-http-crud-frontend/index.html",
+    "main.128f5f02.css.map": "/jdaianova/lifecycle-http-crud-frontend/static/css/main.128f5f02.css.map",
+    "main.5684d348.js.map": "/jdaianova/lifecycle-http-crud-frontend/static/js/main.5684d348.js.map",
+    "787.ad4f4dcc.chunk.js.map": "/jdaianova/lifecycle-http-crud-frontend/static/js/787.ad4f4dcc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.128f5f02.css",
+    "static/js/main.5684d348.js"
+  ]
+}
