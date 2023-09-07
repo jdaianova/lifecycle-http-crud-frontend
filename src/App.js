@@ -9,31 +9,36 @@ function App() {
 
   const [cards, setCards] = useState([]);
 
-  const getAllCards = useEffect(
+  useEffect(
     () => {
       axios.get('http://localhost:7070/notes')
         .then(responce => {
           setCards(responce.data);
         })
-    }
-  );
+    }, []);
 
   const handleSubmit = (currentText) => {
     axios.post('http://localhost:7070/notes', {
       "id": 0,
       "content": currentText
     })
-      .then(getAllCards)
   };
 
   const onDeleteCard = (idDeletedCard) => {
-    axios.delete('http://localhost:7070/notes/' + idDeletedCard)
-      .then(getAllCards)
+    axios.delete('http://localhost:7070/notes/' + idDeletedCard);
+    updateCards();
+  }
+
+  const updateCards = () => {
+    axios.get('http://localhost:7070/notes')
+        .then(responce => {
+          setCards(responce.data);
+        })
   }
 
   return (
     <div className="App">
-      <Header updateCards={getAllCards} />
+      <Header updateCards = {updateCards}/>
       <Cards cards={cards} onDeleteCard={onDeleteCard} />
       <Form handleSubmit={handleSubmit} />
     </div>
